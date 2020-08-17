@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CreateGame from './components/CreateGame';
-import Games from './components/Games';
+import JoinGame from './components/JoinGame';
+// import Games from './components/Games';
 import Game from './pages/Game';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       {!showGame && (
         <>
           <CreateGame onFormSubmit={onFormSubmit} />
-          <Games onFormSubmit={onFormSubmit} />
+          <JoinGame onFormSubmit={onFormSubmit} />
         </>
       )}
       {showGame && <Game name={name} gameId={gameId} tags={tags} />}
