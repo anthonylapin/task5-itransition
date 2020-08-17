@@ -1,0 +1,30 @@
+{
+  "name": "task5",
+  "version": "1.0.0",
+  "description": "Tic tac toe game",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon app.js\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Node.JS",
+    "Express",
+    "ReactJS"
+  ],
+  "author": "Anton Lapin <anthonylapin11@gmail.com>",
+  "license": "ISC"
+}
